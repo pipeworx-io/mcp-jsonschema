@@ -77,3 +77,13 @@ The gateway picks the right tool and fills the arguments automatically.
 ## License
 
 MIT
+
+## No MCP client? Call it over HTTP
+
+```bash
+curl -X POST https://gateway.pipeworx.io/v1/tools/validate_json_schema \
+  -H 'Content-Type: application/json' \
+  -d '{"data":{"name":"John Doe","age":30,"email":"john@example.com"},"schema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"number","minimum":0},"email":{"type":"string","format":"email"}},"required":["name","age"]}}'
+```
+
+No account needed for the first calls. Inspect any tool: `GET https://gateway.pipeworx.io/v1/tools/validate_json_schema`. Find one: `POST https://gateway.pipeworx.io/v1/tools/search_packs` with `{"query":"..."}`.
