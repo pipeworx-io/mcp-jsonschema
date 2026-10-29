@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-jsonschema",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "JSON Schema validation MCP.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-jsonschema": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "jsonschema"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-jsonschema.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/jsonschema",
   "pipeworx": {
-    "sourceHash": "v1-5ad77e7f1d2ed07f2e9f3b0a8f583d9047abe870e69a694a0adf5728cf3baf1a",
-    "sourceCommit": "70cd53748fc9f9a43ed3681d751bfa96e701efd2"
+    "mode": "gateway",
+    "slug": "jsonschema",
+    "gatewaySlug": "jsonschema",
+    "sourceHash": "v1-50b39ebf598c3ad3aac6c4b9419022c79693c841afc5eb9d517bc807aae8470c",
+    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
   }
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "validate_json_schema",
+    "description": "Validate a JSON value against a JSON Schema (draft-07 subset: type, required, properties, additionalProperties, items, enum, const, min/max, minLength/maxLength, pattern, minItems/maxItems, uniqueItems, format). Returns {valid, errors:[{path,message}]}. Keyless, offline.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "The JSON value to validate (any type)."
+        },
+        "schema": {
+          "type": "object",
+          "description": "The JSON Schema to validate against."
+        }
+      },
+      "required": [
+        "data",
+        "schema"
+      ]
+    }
+  }
+]
