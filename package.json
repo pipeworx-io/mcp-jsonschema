@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-jsonschema",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "JSON Schema validation MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "jsonschema",
     "gatewaySlug": "jsonschema",
-    "sourceHash": "v1-50b39ebf598c3ad3aac6c4b9419022c79693c841afc5eb9d517bc807aae8470c",
-    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
+    "sourceHash": "v1-7346e67984c14f8634e513065ec644bf9d28ec3af0c1785c7a477d5a61e9992b",
+    "sourceCommit": "236b0a46d91f343fe094da9f499c378e88f78312"
   }
 }
